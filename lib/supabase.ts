@@ -5,8 +5,8 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-// Server-side client with elevated privileges (for admin API routes)
+// Server-side admin client - uses anon key as fallback if service role not set
 export const supabaseAdmin = () => {
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || supabaseAnonKey;
   return createClient(supabaseUrl, serviceKey);
 };
