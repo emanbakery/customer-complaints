@@ -10,19 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          DEFAULT: '#1a6b3c',
-          dark: '#145530',
-          light: '#e8f5ee',
+          DEFAULT: '#0F4F34',
+          dark: '#082F22',
+          light: '#E8F3EC',
         },
         gold: {
-          DEFAULT: '#c9a84c',
-          light: '#f5e6c0',
-          dark: '#a07830',
+          DEFAULT: '#C89533',
+          light: '#F4D982',
+          dark: '#7B4A18',
         },
         eman: {
-          red: '#b22222',
-          green: '#1a6b3c',
-          gold: '#c9a84c',
+          red: '#9F1D16',
+          green: '#0F4F34',
+          gold: '#C89533',
         },
       },
       fontFamily: {

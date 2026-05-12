@@ -10,14 +10,48 @@ body {
   font-family: var(--font-cairo);
 }
 
+.brand-shell {
+  background:
+    radial-gradient(circle at top left, rgba(200, 149, 51, 0.2), transparent 34rem),
+    linear-gradient(135deg, #fff8e8 0%, #f6ecd4 45%, #edf6ef 100%);
+}
+
 .btn-primary {
-  @apply bg-brand text-white font-bold py-3 px-6 rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3 font-bold text-white shadow-lg shadow-brand/20 transition-colors hover:bg-brand-dark disabled:cursor-not-allowed disabled:opacity-60;
 }
 
 .input-field {
-  @apply w-full border border-amber-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-brand bg-white;
+  @apply w-full rounded-xl border border-gold/45 bg-white px-4 py-3 text-gray-900 shadow-sm focus:outline-none focus:ring-2 focus:ring-gold;
 }
 
 .card {
-  @apply bg-white rounded-2xl shadow-md p-6;
+  @apply rounded-3xl border border-gold/25 bg-white/95 p-6 shadow-2xl shadow-brand-dark/10;
+}
+
+.brand-spinner,
+.submit-spinner {
+  border-radius: 9999px;
+  border-style: solid;
+  animation: spin 0.9s linear infinite;
+}
+
+.brand-spinner {
+  width: 74px;
+  height: 74px;
+  border-width: 6px;
+  border-color: rgba(15, 79, 52, 0.18);
+  border-top-color: #c89533;
+  border-right-color: #9f1d16;
+}
+
+.submit-spinner {
+  width: 18px;
+  height: 18px;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
